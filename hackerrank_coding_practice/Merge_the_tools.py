@@ -8,4 +8,7 @@ def merge_the_tools(s,k):
                 seen.add(char)
                 result += char
         print(result)
-merge_the_tools('AAABCDABA',3)
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
