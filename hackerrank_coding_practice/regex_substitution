@@ -1,0 +1,13 @@
+#Problem Summary
+##Replace every occurrence of && with and, but only if it has a space before and after it.
+##Replace every occurrence of || with or, again, only if it is surrounded by spaces.
+##Do not change && or || if they're not surrounded by spaces.
+##These symbols will never appear at the start or end of a line.
+import re
+n = int(input())
+for _ in range(n):
+    line = input()
+    line = re.sub(r'(?<= )&&(?= )', 'and',line)
+    line = re.sub(r'(?<= )\|\|(?= )', 'or',line)
+    print(line)
+
